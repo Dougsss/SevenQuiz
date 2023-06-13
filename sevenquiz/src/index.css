@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,6 @@
 body, html{
   min-heigth: 100vh;
   heigth: 100%;
-  backgroug-color: #1c1c1c;
 }
 
 img{
