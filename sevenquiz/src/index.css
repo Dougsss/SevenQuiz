@@ -2,8 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+* {
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
+  color: #fff;
 }
+
+body, html{
+  min-heigth: 100vh;
+  heigth: 100%;
+  backgroug-color: #1c1c1c;
+}
+
+img{
+  max-width: 100%;
+}
+
+
