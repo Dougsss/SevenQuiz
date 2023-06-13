@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'general-back': "./img/background3.jpg",
+        'general-back': "ulr('https://img.freepik.com/premium-photo/purple-orange-pink-red-abstract-gradient-background_170579-562.jpg')",
       }
     },
   },
