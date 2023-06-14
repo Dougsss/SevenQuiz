@@ -1,8 +1,14 @@
 import React from 'react';
+import { useContext } from 'react';
+import { QuizContext } from '../../context/quiz';
 import Login from '../../img/login.png';
 import Button from '../Button/Button';
 
 const Welcome = () => {
+  const quizState = useContext(QuizContext);
+
+  console.log(quizState);
+
   return (
     <div className=" p-20 justify-items-center items-center flex flex-col">
         <div className=" flex flex-col justify-self-center gap-4 text-center m-2">
