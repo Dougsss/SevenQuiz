@@ -9,7 +9,7 @@ class Button extends React.Component {
     render() {
         return (
         <button
-            className=" self-center rounded-md border-2 border-purple-600 hover:bg-purple-600 w-1/4 h-10"
+            className=" self-center rounded-md border-2 border-purple-600 hover:bg-purple-600 w-1/4 sm:h-10 text-xs sm:text-base"
             onClick={this.handleClick}>
             Iniciar
         </button>
