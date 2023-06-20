@@ -23,7 +23,7 @@ const Welcome = () => {
             Iniciar
           </button>
         </div>  
-        <img src={Capa} alt="Capa do Mes" className=" w-2/5 m-4"/>
+        <img src={Capa} alt="Capa do Mes" className="m-4"/>
     </div>
   )
 }
