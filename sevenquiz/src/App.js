@@ -9,7 +9,7 @@ function App() {
   const [quizState, dispatch] = useContext(QuizContext);
 
   return (
-      <div className=""> {/* bg-gradient-to-r from-violet-500 to-fuchsia-500 */}
+      <div className="">
         {quizState.gameStage === "Start" && <Welcome />}
         {quizState.gameStage === "Playing" && <Question />}
       </div>

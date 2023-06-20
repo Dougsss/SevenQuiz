@@ -11,9 +11,7 @@ const initialState = {
 /* console.log(initialState); */
 
 const quizReducer = (state, action) => {
-    console.log(state, action); //ele ta imprimindo ate aqui no console,
-    //porem sem o switch ele da erro mas nao ta pegando o return do case..
-
+    console.log(state, action); 
     switch(action.type) {
         case "CHANGE_STAGE":
             return {
