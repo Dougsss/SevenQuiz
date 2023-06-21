@@ -1,0 +1,28 @@
+.options {
+    padding: 8px;
+    margin: 8px;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius:16px;
+    transition: 0.2s;
+    background: linear-gradient(to right, #6366F1, #9333EA, #F472B6);
+}
+.options:hover {
+    opacity: 1;
+}
+.correct {
+    //background-color: #0bfc03;
+    border-color: #0bfc03;
+    border-width: 2px;
+    font-weight: bold;
+}
+
+.wrong {
+    background-color: #ff000;
+    opacity: 0.3;
+}
+
+.hide {
+    display: none;
+}
