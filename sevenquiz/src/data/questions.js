@@ -30,6 +30,16 @@ const data = [
         options: ["qty", "length", "items", "index"],
         answer: "length",
     },
+    {
+        question: "Quantos dias tem em uma semana de 7 dias inteiros?",
+        options: ["4 dias", "6 dias", "7 dias", "2 dias"],
+        answer: "7 dias",
+    },
+    {
+        question: "Qual dos nomes a baixo nao  foi um apostolo?",
+        options: ["Tadeu", "Filipe", "Bartolomeu", "Marcos"],
+        answer: "Marcos",
+    },
     ];
 
 export default data;
