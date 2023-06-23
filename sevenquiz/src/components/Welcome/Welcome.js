@@ -4,6 +4,7 @@ import { QuizContext } from '../../context/quiz';
 import Capa from '../../img/capaLevitico.jpg';
 
 
+
 const Welcome = () => {
   const [quizState, dispatch] = useContext(QuizContext);
 

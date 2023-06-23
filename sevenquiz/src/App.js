@@ -4,6 +4,7 @@ import { QuizContext } from './context/quiz';
 import Welcome from './components/Welcome/Welcome';
 import Question from './components/Question/Question';
 import GameOver from './components/GameOver/GameOver';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         {quizState.gameStage === "Start" && <Welcome />}
         {quizState.gameStage === "Playing" && <Question />}
         {quizState.gameStage === "End" && <GameOver />}
+        <Footer />
       </div>
   );
 }
