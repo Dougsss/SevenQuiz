@@ -16,7 +16,7 @@ const GameOver = () => {
                 <p className=" mt-10 font-semibold text-2xl">Pontuacao: {quizState.score}</p>
                 <p className=" mt-5 font-extralight">Voce acertou {quizState.score} de {quizState.questions.length}{" "} perguntas.</p>
                 <div className=" my-5 justify-items-center items-center flex flex-col">
-                    <img src={WellDone} alt="Fim do Quiz" className=" w-2/4 m-5 mx-10 " />
+                    <img src={WellDone} alt="Fim do Quiz" className=" w-[40%] m-5 mx-10 " />
                 </div>
             </div>
             <button 
