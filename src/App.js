@@ -20,7 +20,7 @@ function App() {
         {quizState.gameStage === "Start" && <Welcome />}
         {quizState.gameStage === "Playing" && <Question />}
         {quizState.gameStage === "End" && <GameOver />}
-        <Footer />
+        {/* <Footer /> */}
       </div>
   );
 }
