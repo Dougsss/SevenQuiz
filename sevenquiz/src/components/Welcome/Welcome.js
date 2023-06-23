@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { QuizContext } from '../../context/quiz';
-import Capa from '../../img/capaLevitico.jpg';
+import Capa from '../../img/jesusCapa.png';
 
 
 
@@ -24,7 +24,7 @@ const Welcome = () => {
             Começar
           </button>
         </div>  
-        <img src={Capa} alt="Capa do Mes" className="m-4"/>
+        <img src={Capa} alt="Capa do Mes" className="m-4 w-[22%]"/>
     </div>
   )
 }
