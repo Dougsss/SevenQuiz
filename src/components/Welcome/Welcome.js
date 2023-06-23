@@ -24,7 +24,7 @@ const Welcome = () => {
             Começar
           </button>
         </div>  
-        <img src={Capa} alt="Capa do Mes" className="m-4 w-[22%]"/>
+        <img src={Capa} alt="Capa do Mes" className="m-4 sm:w-[22%] w-[40%}"/>
     </div>
   )
 }
