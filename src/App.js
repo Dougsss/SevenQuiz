@@ -5,6 +5,7 @@ import Welcome from './components/Welcome/Welcome';
 import Question from './components/Question/Question';
 import GameOver from './components/GameOver/GameOver';
 import Footer from './components/Footer/Footer';
+import Login from './components/LoginPage/Login';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
   return (
       <div className="">
+        < Login />
         {quizState.gameStage === "Start" && <Welcome />}
         {quizState.gameStage === "Playing" && <Question />}
         {quizState.gameStage === "End" && <GameOver />}
