@@ -16,11 +16,13 @@ const Private = ({ Item }) => {
 const RouteList = () => {
     return (
         <>
-            <Login />
+            
                 <Routes>
+                    <Route path="/" element={<Login />} />
                     <Route exact path="/userPerfil" element={ <Private Item={Perfil} />} />
                     <Route path="/startQuiz" element={<PlayGame />} />
                     <Route path="/newUser" element={<FormUser />} />
+                    <Route path="*" element={<Login />} />
                 </Routes>
         </>
     )

@@ -19,7 +19,7 @@ const Login = () => {
               <p className="text-red-500 text-xs italic">Please choose a password.</p>
             </div>
             <div className="flex flex-col items-center gap-5">
-              <Link to={""}
+              <Link to={"/startQuiz"}/* Rota em startQuiz setado apenas provisoriamente */
                 className="bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:bg-gradient-to-r from-fuchsia-500 to-violet-500 rounded-3xl w-[80%] h-12 sm:h-10 p-2">
                   Sing-in
               </Link>
