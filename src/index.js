@@ -5,6 +5,7 @@ import App from './App';
 
 import { BrowserRouter } from 'react-router-dom';
 import { QuizProvider } from './context/quiz';
+import { AuthContext } from './context/auth';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
