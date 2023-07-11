@@ -1,12 +1,30 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Password from "../../img/password.png";
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
+  const { signin } = useAuth();
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
+
+  const handleLogin = () => {
+    if (!email | !senha) {
+      setError("Preencha todos os campos");
+      return;
+    }
+
+    const res = signin(email, senha);
+    if(res) {
+      setError(res);
+      return;
+    }
+
+    navigate("/userPerfil");
+  };
 
 
   return (
@@ -35,10 +53,10 @@ const Login = () => {
                   placeholder="Password"
                   onChange={(e) => [setSenha(e.target.value), setError("")]}
                 />
-                <p className="text-red-500 text-xs italic">Please choose a password.</p>
+                <p className="text-red-500 text-xs italic">{error}</p>
               </div>
               <div className="flex flex-col items-center gap-5">
-                <Link to={"/startQuiz"}/* Rota em startQuiz setado apenas provisoriamente */
+                <Link onClick={handleLogin}
                   className="bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:bg-gradient-to-r from-fuchsia-500 to-violet-500 rounded-3xl w-[80%] h-12 sm:h-10 p-2">
                     Sing-in
                 </Link>
