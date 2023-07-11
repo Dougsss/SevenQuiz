@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Password from "../../img/password.png";
 
 const Login = () => {
+
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [error, setError] = useState("");
+
+
   return (
       <div className=" w-[94%] sm:w-[80%] sm:h-[500px] 2xl:h-[70%] mx-[3%] sm:mx-[10%] my-[3%] sm:my-[15%] 2xl:my-[7%] self-center flex flex-col sm:flex-row ">
         <div className=" w-full sm:w-[60%] h-full rounded-t-3xl sm:rounded-tr-none sm:rounded-l-3xl bg-slate-300 p-2 sm:py-[20%] md:py-2">
@@ -13,8 +19,22 @@ const Login = () => {
           <li className="flex flex-col gap-5 items-center">
             <form className=" px-8 sm:px-1 md:px-8 pt-4 pb-8 ">
               <div className="mb-6">
-                <input className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" />
-                <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Password" />
+                <input
+                  className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                  id="username" 
+                  type="email"
+                  value={email}
+                  placeholder="Username" 
+                  onChange={(e) => [setEmail(e.target.value), setError("")]}
+                />
+                <input 
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
+                  id="password" 
+                  type="password"
+                  value={senha} 
+                  placeholder="Password"
+                  onChange={(e) => [setSenha(e.target.value), setError("")]}
+                />
                 <p className="text-red-500 text-xs italic">Please choose a password.</p>
               </div>
               <div className="flex flex-col items-center gap-5">
