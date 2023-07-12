@@ -1,8 +1,35 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Password from "../../img/password.png";
+import useAuth from '../../hooks/useAuth';
 
 const FormUser = () => {
+    const { signup } = useAuth();
+    const navigate = useNavigate();
+
+    const [email, setEmail] = useState("");
+    const [emailConf, setEmailConf] = useState("");
+    const [senha, setSenha] = useState("");
+    const [error, setError] = useState("");
+
+    const handleSignup = () => {
+        if (!email | !emailConf | !senha) {
+            setError("Preencha todos os campos");
+            return;
+        }   else if (email !== emailConf) {
+            setError("Os e-mails nao sao iguais");
+        }
+    
+        const res = signup(email, senha);
+        if(res) {
+            setError(res);
+            return;
+        }
+    
+        alert("Usuario cadastrado com sucesso!");
+        navigate("/");
+    };
+
   return (
     <div className=" w-[94%] sm:w-[80%] sm:h-[500px] 2xl:h-[70%] mx-[3%] sm:mx-[10%] my-[3%] sm:my-[15%] 2xl:my-[7%] self-center flex flex-col sm:flex-row ">
       <div className=" w-full sm:w-[60%] h-full rounded-t-3xl sm:rounded-tr-none sm:rounded-l-3xl bg-slate-300 p-2 sm:py-[20%] md:py-2">
@@ -25,7 +52,7 @@ const FormUser = () => {
                 <input
                 className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                     type="email"
-                    value={email}
+                    value={emailConf}
                     placeholder="Confirme seu E-mail"
                     onChange={(e) => [setEmailConf(e.target.value), setError("")]}
                 />
@@ -40,7 +67,7 @@ const FormUser = () => {
             </div>
             <div className="flex flex-col items-center gap-5">
               <button
-                onClick={handleLogin}
+                onClick={handleSignup}
                 className="bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:bg-gradient-to-r from-fuchsia-500 to-violet-500 rounded-3xl w-[80%] h-12 sm:h-10 p-2"
               >
                 Inscrever-se
