@@ -35,7 +35,7 @@ const FormUser = () => {
       <div className=" w-full sm:w-[60%] h-full rounded-t-3xl sm:rounded-tr-none sm:rounded-l-3xl bg-slate-300 p-2 sm:py-[20%] md:py-2">
         <img src={Password} alt="passwordImg" className=" py-[13%] xl:py-0" />
       </div>
-      <div className="w-full sm:w-[40%] bg-slate-100 text-center py-[15%] sm:py-[20%] md:py-[10%] 2xl:py-[8%] p-2 rounded-b-3xl sm:rounded-bl-none sm:rounded-r-3xl">
+      <div className="w-full sm:w-[40%] bg-slate-100 text-center py-[15%] sm:py-[20%] md:py-[10%] 2xl:py-[5%] p-2 rounded-b-3xl sm:rounded-bl-none sm:rounded-r-3xl">
         <p className="mb-6 text-slate-700 font-medium text-xl">
           Login your account
         </p>
@@ -68,16 +68,16 @@ const FormUser = () => {
             <div className="flex flex-col items-center gap-5">
               <button
                 onClick={handleSignup}
-                className="bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:bg-gradient-to-r from-fuchsia-500 to-violet-500 rounded-3xl w-[80%] h-12 sm:h-10 p-2"
+                className="bg-gradient-to-l from-fuchsia-500 to-violet-500 rounded-3xl w-[80%] h-12 sm:h-10 p-2"
               >
                 Inscrever-se
               </button>
               <Link
                 to={"/"}
-                className="inline-block align-baseline font-bold text-sm text-violet-500 hover:text-violet-700"
+                className="inline-block align-baseline font-bold text-xs text-violet-500 hover:text-violet-700"
                 href="#"
               >
-                Entry!
+                Fazer Login!
               </Link>
             </div>
           </form>

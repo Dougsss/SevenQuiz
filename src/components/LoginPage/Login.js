@@ -39,30 +39,29 @@ const Login = () => {
               <div className="mb-6">
                 <input
                   className="shadow appearance-none border rounded w-full py-2 px-3 mb-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
-                  id="username" 
                   type="email"
                   value={email}
-                  placeholder="Username" 
+                  placeholder="Digite seu E-mail" 
                   onChange={(e) => [setEmail(e.target.value), setError("")]}
                 />
                 <input 
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" 
-                  id="password" 
                   type="password"
                   value={senha} 
-                  placeholder="Password"
+                  placeholder="Digite sua Senha"
                   onChange={(e) => [setSenha(e.target.value), setError("")]}
                 />
                 <p className="text-red-500 text-xs italic">{error}</p>
               </div>
               <div className="flex flex-col items-center gap-5">
                 <Link onClick={handleLogin}
-                  className="bg-gradient-to-l from-violet-500 to-fuchsia-500 hover:bg-gradient-to-r from-fuchsia-500 to-violet-500 rounded-3xl w-[80%] h-12 sm:h-10 p-2">
-                    Sing-in
+                  className="bg-gradient-to-l from-fuchsia-500 to-violet-500 rounded-3xl w-[80%] h-12 sm:h-10 p-2">
+                    Entrar
                 </Link>
-                <Link to={"/newUser"} className="inline-block align-baseline font-bold text-sm text-violet-500 hover:text-violet-700" href="#">
-                  Forgot Password?
-                </Link>
+                <p className="inline-block align-baseline font-semibold text-xs text-violet-500">
+                  Nao tem uma conta?
+                  <Link to={"/newUser"} className="font-bold hover:text-violet-700"> Registre-se!</Link>
+                </p>
               </div>
             </form>
           </li>
