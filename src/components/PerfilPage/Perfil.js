@@ -11,7 +11,7 @@ const Perfil = () => {
         </li>
       </div>
       <div className="m-2 p-2 h-[50%} w-full bg-white">
-        
+        <h1>hello it's my perfil!</h1>
       </div>
     </div>
   )

@@ -7,7 +7,7 @@ export const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const userToken = localStorage.getItem("user_token");
-        const usersStorage = localStorage.getItem("users_db");
+        const usersStorage = localStorage.getItem("users_bd");
 
         if (userToken && usersStorage) {
             const hasUser = JSON.parse(usersStorage)?.filter(
@@ -18,9 +18,10 @@ export const AuthProvider = ({ children }) => {
         }
     }, []);
 
+    //Essa função é responsável por autenticar o usuário comparando o email e a senha fornecidos com os dados armazenados no localStorage.
     const signin = (email, password) => {
-        const usersStorage = JSON.parse(localStorage.getItem("user_db"));
-        const hasUser = usersStorage?.filter((user) => user.email === email);
+        const usersStorage = JSON.parse(localStorage.getItem("users_bd"));
+        const hasUser = usersStorage?.filter((user) => user.email === email); // verificar aqui, talvez o "user" nao esteja chegando na funcao.
 
         if (hasUser?.length){
             if (hasUser[0].email === email && hasUser[0].password === password) {
@@ -36,6 +37,7 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
+    // Essa função é responsável por criar uma nova conta de usuário, armazenando o email e a senha no armazenamento local do navegador.
     const signup = (email, password) => {
         const usersStorage = JSON.parse(localStorage.getItem("users_bd"));
     
