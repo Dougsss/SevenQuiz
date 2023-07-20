@@ -54,10 +54,10 @@ const Login = () => {
                 <p className="text-red-500 text-xs italic">{error}</p>
               </div>
               <div className="flex flex-col items-center gap-5">
-                <Link onClick={handleLogin}
-                  className="bg-gradient-to-l from-fuchsia-500 to-violet-500 rounded-3xl w-[80%] h-12 sm:h-10 p-2">
+                <div onClick={handleLogin}
+                  className="bg-gradient-to-l from-fuchsia-500 to-violet-500 rounded-3xl w-[80%] h-12 sm:h-10 p-2 cursor-pointer opacity-80 hover:opacity-100">
                     Entrar
-                </Link>
+                </div>
                 <p className="inline-block align-baseline font-semibold text-xs text-violet-500">
                   Nao tem uma conta?
                   <Link to={"/newUser"} className="font-bold hover:text-violet-700"> Registre-se!</Link>

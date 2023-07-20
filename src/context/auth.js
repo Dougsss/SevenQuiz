@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
     //Essa função é responsável por autenticar o usuário comparando o email e a senha fornecidos com os dados armazenados no localStorage.
     const signin = (email, password) => {
         const usersStorage = JSON.parse(localStorage.getItem("users_bd"));
-        const hasUser = usersStorage?.filter((user) => user.email === email); // verificar aqui, talvez o "user" nao esteja chegando na funcao.
+        const hasUser = usersStorage?.filter((user) => user.email === email); 
 
         if (hasUser?.length){
             if (hasUser[0].email === email && hasUser[0].password === password) {

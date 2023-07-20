@@ -1,17 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from "react-router-dom";
+import useAuth from '../../hooks/useAuth';
 
 const Perfil = () => {
+
+  const { signout } = useAuth();
+  const navigate = useNavigate();
+
   return (
-    <div>
+    <div className="flex flex-col gap-5">
       <div className=" container w-full h-10 flex flex-row">
-        <li>
-          <p>Seus Dados</p>
-          <p>Configuracao</p>
-          <p>Ajuda</p>
-        </li>
+        <ul>
+          <li>Seus Dados</li>
+          <li>Configuracao</li>
+          <li>Ajuda</li>
+        </ul>
+        {/* <button Text="Sair" onClick={() => [signout(), navigate("/")]}>
+        Sair
+      </button> */}
       </div>
-      <div className="m-2 p-2 h-[50%} w-full bg-white">
-        <h1>hello it's my perfil!</h1>
+      <div className="m-2 p-2 h-[50%} w-[30%] bg-gray-900 cursor-pointer text-center" onClick={() => [signout(), navigate("/")]}>
+        <h1>I want out of my perfil!</h1>
       </div>
     </div>
   )
