@@ -33,9 +33,9 @@ const Perfil = () => {
           </div>
         </div>
       </nav>
-      <section className="flex flex-row gap-2 p-2">
-        <div className="bg-gray-900 opacity-70 rounded-md w-[50%] h-20 flex items-center justify-center"> Status do Participante </div>
-        <div className="bg-gray-900 opacity-70 rounded-md w-[50%] h-20 flex items-center justify-center"> Rank Trimestre </div>
+      <section className="flex flex-col md:flex-row gap-2 p-2">
+        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-20 flex items-center justify-center"> Status do Participante </div>
+        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-20 flex items-center justify-center"> Rank Trimestre </div>
       </section>
       <section className="px-2 w-[100%] h-auto">
         <div className="z-0 bg-gray-900 opacity-70 rounded-md p-5 flex flex-col items-center justify-center">
