@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import 'boxicons';
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from '../../hooks/useAuth';
@@ -12,6 +13,12 @@ const Perfil = () => {
   function onToggleMenu(e) {
     e.name = e.name === 'menu' ? 'close' : 'menu'
     navLinks.classList.toggle('top-[9%]')
+  };
+
+  // funcao para selecionar o estado dos botoes de "podium" e "tabela"
+  const [selectedDiv, setSelectedDiv] = useState(null);
+  const handleDivClick = (divIndex) => {
+    setSelectedDiv(divIndex === selectedDiv ? null : divIndex)
   };
 
   return (
@@ -33,9 +40,20 @@ const Perfil = () => {
           </div>
         </div>
       </nav>
+      
       <section className="flex flex-col md:flex-row gap-2 p-2">
-        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-20 flex items-center justify-center"> Status do Participante </div>
-        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-20 flex items-center justify-center"> Rank Trimestre </div>
+        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-32 flex items-center justify-center"> Status do Player </div>
+        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-32">
+          <div className=" flex flex-gow gap-1 p-2">
+            <Link to={""} className="cursor-pointer text-center border-r border-b border-white w-[50%]" //corrigir
+            onClick={() => handleDivClick(0)}
+            >Podium</Link>
+            <Link to={""} className="cursor-pointer text-center border-l border-b border-white w-[50%]" //corrigir
+            onClick={() => handleDivClick(1)}
+            >Tabela</Link>
+          </div>
+          <div className="p-1"></div>
+        </div>
       </section>
       <section className="px-2 w-[100%] h-auto">
         <div className="z-0 bg-gray-900 opacity-70 rounded-md p-5 flex flex-col items-center justify-center">
