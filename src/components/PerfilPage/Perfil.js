@@ -54,13 +54,13 @@ const Perfil = () => {
       </nav>
       
       <section className="flex flex-col md:flex-row gap-2 p-2">
-        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-32 flex items-center justify-center"> Status do Player </div>
-        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-32">
+        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-auto flex items-center justify-center"> Status do Player </div>
+        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-auto">
           <div className=" flex flex-gow gap-1 p-2">
-            <button className="cursor-pointer text-center border-r border-b border-white w-[50%]"
+            <button className="cursor-pointer text-center focus:outline-none focus:text-lg focus:font-semibold focus:border-b border-white w-[50%]"
             onClick={handleDivClick1}
             >Podium</button>
-            <button className="cursor-pointer text-center border-l border-b border-white w-[50%]"
+            <button className="cursor-pointer text-center focus:outline-none focus:text-lg focus:font-semibold focus:border-b border-white w-[50%]"
             onClick={handleDivClick2}
             >Tabela</button>
           </div>
