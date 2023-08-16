@@ -4,6 +4,9 @@ import 'boxicons';
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from '../../hooks/useAuth';
 
+import ListRank from '../ListRank/ListRank';
+import Podium from '../Podium/Podium';
+
 const Perfil = () => {
 
   const { signout } = useAuth();
@@ -16,10 +19,19 @@ const Perfil = () => {
   };
 
   // funcao para selecionar o estado dos botoes de "podium" e "tabela"
-  const [selectedDiv, setSelectedDiv] = useState(null);
-  const handleDivClick = (divIndex) => {
-    setSelectedDiv(divIndex === selectedDiv ? null : divIndex)
+  const [showDiv1, setShowDiv1] = useState(true);
+  const [showDiv2, setShowDiv2] = useState(false);
+
+  const handleDivClick1 = () => {
+    setShowDiv1(true);
+    setShowDiv2(false);
   };
+
+  const handleDivClick2 = () => {
+    setShowDiv1(false);
+    setShowDiv2(true);
+  };
+
 
   return (
     <>
@@ -45,14 +57,15 @@ const Perfil = () => {
         <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-32 flex items-center justify-center"> Status do Player </div>
         <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-32">
           <div className=" flex flex-gow gap-1 p-2">
-            <Link to={"podiumRank"} className="cursor-pointer text-center border-r border-b border-white w-[50%]" //corrigir
-            onClick={() => handleDivClick(0)}
-            >Podium</Link>
-            <Link to={"/listRank"} className="cursor-pointer text-center border-l border-b border-white w-[50%]" //corrigir
-            onClick={() => handleDivClick(1)}
-            >Tabela</Link>
+            <button className="cursor-pointer text-center border-r border-b border-white w-[50%]"
+            onClick={handleDivClick1}
+            >Podium</button>
+            <button className="cursor-pointer text-center border-l border-b border-white w-[50%]"
+            onClick={handleDivClick2}
+            >Tabela</button>
           </div>
-          <div className="p-1"></div>
+          {showDiv1 && <div className="p-1"><Podium /></div>}
+          {showDiv2 && <div className="p-1"><ListRank /></div>}
         </div>
       </section>
       <section className="px-2 w-[100%] h-auto">
