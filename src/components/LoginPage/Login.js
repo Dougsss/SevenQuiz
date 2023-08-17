@@ -30,7 +30,7 @@ const Login = () => {
   return (
       <div className=" w-[94%] sm:w-[80%] sm:h-[500px] 2xl:h-[70%] mx-[3%] sm:mx-[10%] my-[3%] sm:my-[15%] 2xl:my-[7%] self-center flex flex-col sm:flex-row ">
         <div className=" w-full sm:w-[60%] h-full rounded-t-3xl sm:rounded-tr-none sm:rounded-l-3xl bg-slate-300 p-2 sm:py-[20%] md:py-2">
-          <img src={Password} alt="passwordImg" className=" py-[13%] xl:py-0"/>
+          <img src={Password} alt="passwordImg" className="py-[9%] md:py-[13%] xl:py-0"/>
         </div>
         <div className="w-full sm:w-[40%] bg-slate-100 text-center py-[15%] sm:py-[20%] md:py-[10%] 2xl:py-[8%] p-2 rounded-b-3xl sm:rounded-bl-none sm:rounded-r-3xl">
           <p className="mb-6 text-slate-700 font-medium text-xl">Login your account</p>
