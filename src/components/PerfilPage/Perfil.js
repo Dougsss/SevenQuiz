@@ -54,7 +54,21 @@ const Perfil = () => {
       </nav>
       
       <section className="flex flex-col md:flex-row gap-2 p-2">
-        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-auto flex items-center justify-center"> Status do Player </div>
+        <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-auto flex flex-col">
+          <h1 className=" p-2 text-center font-light">Status do Player</h1>
+          <div className="p-4 flex flex-row gap-4 h-[100%]">
+            <div className=" w-[50%] bg-black rounded-md">
+              <div className="p-2 h-[50%] flex flex-row">
+                <img src="https://img.freepik.com/vector-premium/perfil-hombre-dibujos-animados_18591-58482.jpg?w=2000" className="mx-4 my-2 rounded-full w-20 h-20" />
+                <p className="pt-2 font-extralight">Name:</p>
+              </div>
+              <div className="p-2 h-[50%] text-center">
+                Range com acertos!
+              </div>
+            </div>
+            <div className=" w-[50%] bg-black rounded-md"></div>
+          </div>
+        </div>
         <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-auto">
           <div className=" flex flex-gow gap-1 p-2">
             <button className="cursor-pointer text-center focus:outline-none focus:text-lg focus:font-semibold focus:border-b border-white w-[50%]"
@@ -69,7 +83,7 @@ const Perfil = () => {
         </div>
       </section>
       <section className="px-2 w-[100%] h-auto">
-        <div className="z-0 bg-gray-900 opacity-70 rounded-md p-5 flex flex-col items-center justify-center">
+        <div className="z-0 bg-gray-900 opacity-70 rounded-md p-5 flex flex-col items-center justify-center md:w-[60%] md:mx-[20%]">
           <p className="z-10 font-extrabold text-white"> Let's go the next game!</p>
           <Link to={"/startQuiz"} className="z-10 cursor-pointer hover:bg-white border border-white rounded-full text-white font-semibold hover:text-gray-900 w-20 h-20 m-5 flex items-center justify-center">Start</Link>
         </div>
