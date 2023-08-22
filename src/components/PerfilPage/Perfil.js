@@ -58,11 +58,11 @@ const Perfil = () => {
           <h1 className=" p-2 text-center font-light">Status do Player</h1>
           <div className="p-4 flex flex-row gap-4 h-[100%]">
             <div className=" w-[50%] bg-black rounded-md">
-              <div className="p-2 h-[50%] flex flex-row">
-                <img src="https://img.freepik.com/vector-premium/perfil-hombre-dibujos-animados_18591-58482.jpg?w=2000" className="mx-4 my-2 rounded-full w-20 h-20" />
+              <div className="p-2 h-[40%] flex flex-col sm:flex-row">
+                <img src="https://img.freepik.com/vector-premium/perfil-hombre-dibujos-animados_18591-58482.jpg?w=2000" className="mx-4 my-2 rounded-full w-14 sm:w-20 h-14 sm:h-20 self-center" />
                 <p className="pt-2 font-extralight">Name:</p>
               </div>
-              <div className="p-2 h-[50%] text-center">
+              <div className="p-2 h-[60%] text-center">
                 Range com acertos!
               </div>
             </div>
