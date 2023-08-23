@@ -56,17 +56,21 @@ const Perfil = () => {
       <section className="flex flex-col md:flex-row gap-2 p-2">
         <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-auto flex flex-col">
           <h1 className=" p-2 text-center font-light">Status do Player</h1>
-          <div className="p-4 flex flex-row gap-4 h-[100%]">
-            <div className=" w-[50%] bg-black rounded-md">
-              <div className="p-2 h-[40%] flex flex-col sm:flex-row">
-                <img src="https://img.freepik.com/vector-premium/perfil-hombre-dibujos-animados_18591-58482.jpg?w=2000" className="mx-4 my-2 rounded-full w-14 sm:w-20 h-14 sm:h-20 self-center" />
-                <p className="pt-2 font-extralight">Name:</p>
-              </div>
-              <div className="p-2 h-[60%] text-center">
-                Range com acertos!
+          <div className="p-4 flex flex-col sm:flex-row gap-4 h-[100%]">
+            <div className="w-[100%] sm:w-[50%] p-2 bg-black rounded-md">
+              <div className="flex flex-row">
+                <img src="https://img.freepik.com/vector-premium/perfil-hombre-dibujos-animados_18591-58482.jpg?w=2000" className="mx-4 my-2 rounded-full w-20 h-20 self-center" />
+                <div className="flex flex-col">
+                  <p className="pt-2 px-2 font-extralight text-sm">Name: Fulano de tal</p>
+                  <p className="pt-2 px-2 font-extralight text-sm">Classe: Jovens</p>
+                  <p className="pt-2 px-2 font-extralight text-sm">Geral: 4 lugar</p>
+                </div>
               </div>
             </div>
-            <div className=" w-[50%] bg-black rounded-md"></div>
+            <div className="w-[100%] sm:w-[50%] p-2 bg-black rounded-md">
+              <img src="https://img.freepik.com/vector-premium/perfil-hombre-dibujos-animados_18591-58482.jpg?w=2000" className="mx-[37%] my-2 rounded-full w-20 h-20 self-center" />
+                  <p className="pt-2 px-2 font-extralight text-sm text-center">Apenas teste!</p>
+            </div>
           </div>
         </div>
         <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-auto">
