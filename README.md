@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Se7en Quiz
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Uma aplicacao com o intuito de proporcionar um quiz no  qual tem uma rank semanal com a pontucao dos participantes.
 
 ## Available Scripts
 
