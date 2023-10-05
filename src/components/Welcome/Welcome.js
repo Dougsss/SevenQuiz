@@ -10,7 +10,7 @@ const Welcome = () => {
 
 
   return (
-    <div className=" px-5 py-[20%] md:py-[40%] sm:py-20 sm:p-20 justify-items-center items-center flex flex-col">
+    <div className=" px-5 py-[20%] md:py-[8%] sm:py-20 sm:p-20 justify-items-center items-center flex flex-col">
         <div className=" flex flex-col justify-self-center text-center m-2 mb-6">
           <h2 className="font-extrabold text-[36px] sm:text-5xl md:text-[80px]">
             Desafio da Semana!

@@ -2,23 +2,27 @@ import React from 'react'
 
 const ListRank = () => {
     // Suponha que você tenha um array de itens
-    const itens = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7"];
-    
+    const itens = ["Joao", "Pedro", "Maria", "Josue", "Germana", "David"];
+
   return (
     <div className="m-1 flex justify-center items-center">
       <div className="container mx-auto py-2">
+        <li className="grid grid-cols-3 gap-1 mb-1">
+          <ul className="p-3 rounded bg-gray-700 text-center ">Position</ul>
+          <ul className="p-3 rounded bg-gray-700 text-center ">Player</ul>
+          <ul className="p-3 rounded bg-gray-700 text-center ">Points</ul>
+        </li>
       <div className="grid grid-cols-1 gap-1">
         {itens.map((item, index) => (
           <div
             key={index}
-            className="bg-gray-500 p-4 rounded shadow-md hover:shadow-lg"
+            className="bg-gray-500 p-3 rounded shadow-md hover:shadow-lg"
           >
             {item}
           </div>
         ))}
       </div>
-    </div>
-      {/* <img className=" rounded-md h-80" src='https://excelforever.com.br/wp-content/uploads/2021/03/image.png'/> */}
+      </div>
     </div>
   )
 }
