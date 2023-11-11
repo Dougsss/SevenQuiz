@@ -23,7 +23,8 @@ const Login = () => {
       return;
     }
 
-    navigate("/userPerfil");
+    navigate("/startQuiz");
+    /* navigate("/userPerfil"); */
   };
 
 

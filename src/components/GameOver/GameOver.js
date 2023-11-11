@@ -20,7 +20,7 @@ const GameOver = () => {
                 </div>
             </div>
             <button 
-                className=" z-10 mt-2 sm:-mt-5 self-center rounded-3xl border-b-2 bg-purple-500 hover:bg-purple-600 border-black hover:font-bold w-3/4 sm:w-1/4 h-8 sm:h-10 text-xs sm:text-lg md:text-lg"
+                className=" z-10  mt-10 self-center rounded-3xl border-2 border-purple-600 hover:bg-purple-600 hover:font-bold w-[70%] sm:w-[25%] h-12 sm:h-10 text-sm sm:text-base"
                 onClick={() => dispatch({ type: "NEW_GAME" })}>
                 Voltar ao Inicio
             </button>

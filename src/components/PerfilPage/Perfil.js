@@ -61,18 +61,19 @@ const Perfil = () => {
               <div className="flex flex-row">
                 <img src="https://img.freepik.com/vector-premium/perfil-hombre-dibujos-animados_18591-58482.jpg?w=2000" className="mx-4 my-2 rounded-full w-20 h-20 self-center" />
                 <div className="flex flex-col">
-                  <p className="pt-2 px-2 font-extralight text-sm">Name: Fulano de tal</p>
+                  <p className="pt-2 px-2 font-extralight text-sm">Name: User#007</p>
                   <p className="pt-2 px-2 font-extralight text-sm">Classe: Jovens</p>
-                  <p className="pt-2 px-2 font-extralight text-sm">Geral: 4 lugar</p>
+                  {/* <p className="pt-2 px-2 font-extralight text-sm">Geral: 1 Lugar!</p> */}
                 </div>
               </div>
             </div>
-            <div className="w-[100%] sm:w-[50%] p-2 bg-black rounded-md">
+            {/* <div className="w-[100%] sm:w-[50%] p-2 bg-black rounded-md">
               <img src="https://img.freepik.com/vector-premium/perfil-hombre-dibujos-animados_18591-58482.jpg?w=2000" className="mx-[37%] my-2 rounded-full w-20 h-20 self-center" />
-                  <p className="pt-2 px-2 font-extralight text-sm text-center">Apenas teste!</p>
-            </div>
+                  <p className="pt-2 font-extralight text-sm text-center">Apenas teste!</p>
+            </div> */}
           </div>
         </div>
+        {/* Bloco que contem o Podium e a Tabala */}
         <div className="bg-gray-900 opacity-70 rounded-md w-[100%] md:w-[50%] h-auto">
           <div className=" flex flex-gow gap-1 p-2">
             <button className="cursor-pointer text-center focus:outline-none focus:text-lg focus:font-semibold focus:border-b border-white w-[50%]"
@@ -82,8 +83,8 @@ const Perfil = () => {
             onClick={handleDivClick2}
             >Tabela</button>
           </div>
-          {showDiv1 && <div className="p-1"><Podium /></div>}
-          {showDiv2 && <div className="p-1"><ListRank /></div>}
+          {showDiv1 && <div className="p-6 text-center bg-black">{/* <Podium /> */} Em Manutenção! </div>}
+          {showDiv2 && <div className="p-6 text-center bg-black">{/* <ListRank /> */} Em Manutenção também!! </div>}
         </div>
       </section>
       <section className="px-2 w-[100%] h-auto">
