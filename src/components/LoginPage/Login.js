@@ -23,8 +23,8 @@ const Login = () => {
       return;
     }
 
-    navigate("/startQuiz");
-    /* navigate("/userPerfil"); */
+    /* navigate("/startQuiz"); */ /* Usar apenas quando quero fazer manutencao no perfil */
+    navigate("/userPerfil");
   };
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { QuizContext } from '../../context/quiz';
 import Capa from '../../img/jesusCapa.png';
@@ -24,6 +25,10 @@ const Welcome = () => {
             onClick={() => dispatch({type:"CHANGE_STAGE"})}>
             Começar
           </button>
+          <Link to={"/userPerfil"}
+            className="m-2 mt-12 text-sm sm:text-base hover:font-bold underline underline-offset-4">
+            Voltar
+          </Link>
         </div>  
     </div>
   )
